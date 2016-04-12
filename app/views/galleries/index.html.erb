@@ -1,3 +1,16 @@
-<h1>RETURN WHATEVER!!!</h1>
+<h1>This is where the Galleries will Go</h1>
 
-<p>dasdsadasdasdasdad</p>
+<ul>
+<% @galleries.each do |gallery| %>
+  <li>
+    <div class="gallery">
+      <a href="/galleries/<%= gallery.id %>">
+        <%= gallery.location %>
+        <%= gallery.genre %>
+      </a>
+    </div>
+  </li>
+<% end %>
+</ul>
+
+<a href="/galleries/new">Make a new gallery</a>

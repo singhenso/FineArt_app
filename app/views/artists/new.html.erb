@@ -1,0 +1,23 @@
+<h1>These are the artsist for Gallery</h1>
+
+<%= form_for [@gallery, @artist] do |f| %>
+
+  <div>
+    <%= f.label :location %>
+    <%= f.text_field :location%>
+  </div>
+  <div>
+    <%= f.label :genre %>
+    <%= f.text_field :genre %>
+  </div>
+  <div>
+    <%= f.label :medium %>
+    <%= f.text_field :medium %>
+  </div>
+  <div>
+    <%= f.submit %>
+    </div>
+  <% end %>
+
+
+
