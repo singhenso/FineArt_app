@@ -1,14 +1,14 @@
 <h1>These are the Artist in this Gallery</h1>
 
+
 <ul>
-<% @artists.each do |artist| %>
+<% @artist.each do |artist| %>
   <li>
-    <div class="artist"
-      <a href="/artists<%= artist.id %>"
+    <div class="artist">
+      <a href="/artists<%= artist.id %>">
         <%= artist.location %>
         <%= artist.genre %>
         <%= artist.medium %>
-
       </a>
     </div>
   </li>
@@ -17,4 +17,6 @@
 
 
 
+
 <a href="/artists/new">Make a new Artist</a>
+

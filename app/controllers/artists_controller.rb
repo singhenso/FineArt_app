@@ -2,7 +2,8 @@ class ArtistsController < ApplicationController
   def edit
   end
 
-  def idex
+  def index
+    @artist = Artist.all
   end
 
   def create
@@ -20,9 +21,11 @@ class ArtistsController < ApplicationController
   end
 
   def show
+    @artist = Artist.find_by(id: params[:id])
   end
 
   private
+
 
   def artist_params
     params.require(:artist).permit(:genre, :location, :medium, :gallery_id)
