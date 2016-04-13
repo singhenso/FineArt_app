@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160411234612) do
+ActiveRecord::Schema.define(version: 20160412230928) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -23,6 +23,7 @@ ActiveRecord::Schema.define(version: 20160411234612) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer  "gallery_id"
+    t.string   "name"
   end
 
   create_table "galleries", force: :cascade do |t|
@@ -31,6 +32,7 @@ ActiveRecord::Schema.define(version: 20160411234612) do
     t.integer  "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string   "name"
   end
 
   add_index "galleries", ["user_id"], name: "index_galleries_on_user_id", using: :btree
@@ -42,6 +44,7 @@ ActiveRecord::Schema.define(version: 20160411234612) do
     t.string   "artist_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string   "name"
   end
 
   create_table "users", force: :cascade do |t|

@@ -1,5 +1,13 @@
 Rails.application.routes.draw do
 
+  get 'items/edit'
+
+  get 'items/index'
+
+  get 'items/new'
+
+  get 'items/show'
+
   get 'artist/edit'
 
   get 'artist/idex'
@@ -18,6 +26,7 @@ Rails.application.routes.draw do
   delete '/logout' => 'sessions#destroy'
   post '/users/:user_id/galleries/new' => "galleries#new"
   get '/users/:user_id/galleries/' => "galleries#index"
+  get '/items' => "items#index"
 
   resources :galleries do
     # /galleries/:id/artists

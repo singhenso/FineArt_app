@@ -1,0 +1,21 @@
+<%= form_for [@artist, @item] do |f| %>
+  <div>
+    <%= f.label :name%>
+    <%= f.text_field :name %>
+  </div>
+  <div>
+    <%= f.label :genre%>
+    <%= f.text_field :genre %>
+  </div>
+  <div>
+    <%= f.label :medium %>
+    <%= f.text_field :medium%>
+  </div>
+  <div>
+    <%= f.label :location %>
+    <%= f.text_field :location %>
+  </div>
+  <div>
+    <%= f.submit %>
+    </div>
+  <% end %>

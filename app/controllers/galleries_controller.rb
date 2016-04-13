@@ -23,6 +23,6 @@ class GalleriesController < ApplicationController
   private
 
   def gallery_params
-    params.require(:gallery).permit(:location, :genre, :user_id)
+    params.require(:gallery).permit(:name, :location, :genre, :user_id)
   end
 end

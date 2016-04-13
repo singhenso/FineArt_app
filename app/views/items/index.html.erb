@@ -1,0 +1,19 @@
+<h1>List of all the paintings</h1>
+
+<h1>Items#index</h1>
+<p>Find me in app/views/items/index.html.erb</p>
+
+<ul>
+    <% @items.each do |item| %>
+        <li>
+          <div class="item">
+          <a href="items/<%=item.id %>">
+            <strong> <%= item.name %> </strong>
+                    Genre: <%= item.genre %><br>
+                    Medium: <%= item.medium %><br>
+                    Location: <%= item.location %><br>
+              </a>
+            </div>
+        </li>
+    <% end %>
+</ul>
