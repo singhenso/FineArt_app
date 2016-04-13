@@ -25,6 +25,7 @@ g1.user = u1
 g1.save
 
 a1 = Artist.create({
+  name: "john"
   genre: "Realism",
   location: "Los Angeles",
   medium: "Oil"
@@ -40,6 +41,7 @@ g1.artists.create({
 })
 
 a1.items.create({
+  name: "Hawking"
   genre: "Dada",
   medium: "Sculpture",
   location: "Brazil"
