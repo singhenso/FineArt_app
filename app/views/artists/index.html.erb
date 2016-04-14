@@ -5,12 +5,11 @@
 <% @artist.each do |artist| %>
   <li>
     <div class="artist">
-      <a href="/artists/<%= artist.id %>">
-        Artist:  <%= artist.name %><br>
+        Artist:  <%= link_to artist.name, gallery_artist_path(@gallery, artist) %><br>
         Location: <%= artist.location %><br>
         Genre: <%= artist.genre %><br>
         Medium: <%= artist.medium %><br>
-      </a>
+
     </div>
   </li>
 <% end %>
@@ -19,5 +18,5 @@
 
 
 
-<a href="/artists/new">Make a new Artist</a>
+<%= link_to 'Make a new Artist', new_gallery_artist_path %>
 

@@ -3,16 +3,17 @@ class ArtistsController < ApplicationController
   end
 
   def index
-    @artist = Artist.all
+    @gallery = Gallery.find(params[:gallery_id])
+    @artist = @gallery.artists
   end
 
   def create
-
+    @gallery = Gallery.find(params[:gallery_id])
     @artist = Artist.new(artist_params)
     if @artist.save
-      redirect_to artists_path
+      redirect_to gallery_artists_path
     else
-      render :new_artist
+      render :new
     end
   end
 
@@ -25,7 +26,14 @@ class ArtistsController < ApplicationController
     @artist = Artist.find_by(id: params[:id])
   end
 
-  private
+  def destroy
+    @artist = Artist.find(params[:id])
+    @gallery = Gallery.find(params[:gallery_id])
+    @artist.destroy
+    redirect_to gallery_path(@gallery)
+  end
+
+private
 
 
   def artist_params

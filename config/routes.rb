@@ -18,7 +18,7 @@ Rails.application.routes.draw do
 
 
 
-  resources :users, :galleries, :artists, :items
+  resources :users, :items
 
   # root 'sessions#new'
   root 'sessions#new'
