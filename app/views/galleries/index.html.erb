@@ -1,17 +1,21 @@
 <h1>These are a list of current Art Galleries</h1>
 
-<ul>
+<ul><h1>
 <% @galleries.each do |gallery| %>
   <li>
     <div class="gallery">
-      <a href="/galleries/<%= gallery.id %>">
-        Name: <%= gallery.name %><br>
-        Location: <%= gallery.location %><br>
-        Genre: <%= gallery.genre %><br>
+      <a href="/galleries/<%= gallery.id %>/artists">
+        <%= gallery.name %><br>
+        <%= gallery.location %><br>
+        <%= gallery.genre %><br>
+        <br>
+
       </a>
     </div>
   </li>
-<% end %>
+<% end %></h1>
 </ul>
 
-<a href="/galleries/new">Make a new gallery</a>
+<h4><a href="/galleries/new">Make a new gallery</a></h4>
+
+

@@ -65,16 +65,23 @@ div {
     margin-bottom: 0px;
     background-color: #c00;
     color: #fff;
+    list-style-type: none;
   }
 
   ul li {
     font-size: 12px;
     list-style: square;
+    list-style-type: none;
   }
 }
 
-h1 {
+h1 , h3 , h4{
   text-align: center;
+  list-style-type: none;
 }
 
+.artist {
+  text-align: center;
+  list-style-type: none;
+}
 

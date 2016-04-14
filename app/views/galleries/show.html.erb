@@ -1,9 +1,11 @@
-<%= @gallery.name %>
+<h1><%= @gallery.name %></h1>
 
 
 <br>
 
-<a href="/galleries/<%= @gallery.id %>/artists/new">Add artist</a>
+<!-- <h3><a href="/galleries/<%= @gallery.id %>/artists/new">Add artist</a></h3>
+ --><br>
 <br>
-<br>
-<%= link_to 'Destroy!', gallery_path(@gallery), method: :delete, data: { confirm: 'Are you sure? '} %>
+<h4><%= link_to 'Destroy', gallery_path(@gallery), method: :delete, data: { confirm: 'Are you sure? '} %></h4>
+
+<h3><a href="/galleries/<%= @gallery.id %>/artists/">Add artist</a></h3>

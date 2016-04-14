@@ -9,14 +9,15 @@
         Location: <%= artist.location %><br>
         Genre: <%= artist.genre %><br>
         Medium: <%= artist.medium %><br>
-
+        <br>
     </div>
   </li>
 <% end %>
 </ul>
 
 
+<h3><a href="/galleries/<%= @gallery.id %>/artists/">View Artist in <%= @gallery.name %></a></h3>
 
-
+<h3><a href="/galleries/<%= @gallery.id %>/artists/new">Add new artist in <%= @gallery.name%></a></h3>
 <%= link_to 'Make a new Artist', new_gallery_artist_path %>
 
