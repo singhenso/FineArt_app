@@ -16,13 +16,16 @@ Rails.application.routes.draw do
 
   get 'artist/show'
 
-  resources :users, :galleries, :artists
+
+
+  resources :users, :galleries, :artists, :items
 
   # root 'sessions#new'
   root 'sessions#new'
 
   get '/login' => 'sessions#new'
   post '/login' => 'sessions#create'
+
   delete '/logout' => 'sessions#destroy'
   post '/users/:user_id/galleries/new' => "galleries#new"
   get '/users/:user_id/galleries/' => "galleries#index"

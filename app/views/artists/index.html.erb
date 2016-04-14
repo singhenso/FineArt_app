@@ -5,7 +5,7 @@
 <% @artist.each do |artist| %>
   <li>
     <div class="artist">
-      <a href="/artists<%= artist.id %>">
+      <a href="/artists/<%= artist.id %>">
         Artist:  <%= artist.name %><br>
         Location: <%= artist.location %><br>
         Genre: <%= artist.genre %><br>
