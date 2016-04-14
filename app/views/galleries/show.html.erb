@@ -1,5 +1,9 @@
 <%= @gallery.name %>
 
 
+<br>
 
 <a href="/galleries/<%= @gallery.id %>/artists/new">Add artist</a>
+<br>
+<br>
+<%= link_to 'Destroy!', gallery_path(@gallery), method: :delete, data: { confirm: 'Are you sure? '} %>

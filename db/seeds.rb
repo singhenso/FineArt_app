@@ -18,6 +18,7 @@ u1 = User.create({
 })
 
 g1 = Gallery.new({
+  name: "funny",
   location: "China",
   genre: "Abstract"
 })
@@ -25,7 +26,7 @@ g1.user = u1
 g1.save
 
 a1 = Artist.create({
-  name: "john"
+  name: "john",
   genre: "Realism",
   location: "Los Angeles",
   medium: "Oil"
@@ -35,13 +36,14 @@ a1 = Artist.create({
 # which inserts it into the db
 g1.artists.push(a1)
 g1.artists.create({
+  name: "whatever",
   genre: "Dada",
   location: "Berlin",
   medium: "Oil"
 })
 
 a1.items.create({
-  name: "Hawking"
+  name: "Hawking",
   genre: "Dada",
   medium: "Sculpture",
   location: "Brazil"

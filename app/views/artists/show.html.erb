@@ -1,6 +1,11 @@
-<h1>These are the list of the artist</h1>
+<h1>The Paintings of <%= @artist.name%></h1>
 
-<p> lmfao </p>
-<a href="/items/">Add items</a>
+
+<%= link_to 'Add Items', new_gallery_artist_item_path(@artist.gallery, @artist) %>
+<br>
+<br>
+
+<br>
+
 
 <%= link_to 'Destroy!', gallery_artist_path(@artist.gallery, @artist), method: :delete, data: { confirm: 'Are you sure? '} %>

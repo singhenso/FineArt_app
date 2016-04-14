@@ -1,17 +1,1 @@
-<%= form_for [@user, @gallery] do |f| %>
-  <div>
-    <%= f.label :name%>
-    <%= f.text_field :name %>
-  </div>
-  <div>
-    <%= f.label :location %>
-    <%= f.text_field :location %>
-  </div>
-  <div>
-    <%= f.label :genre %>
-    <%= f.text_field :genre %>
-  </div>
-  <div>
-    <%= f.submit %>
-    </div>
-  <% end %>
+<%= render 'form' %>

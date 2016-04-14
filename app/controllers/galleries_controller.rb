@@ -12,12 +12,31 @@ class GalleriesController < ApplicationController
     if @gallery.save
       redirect_to galleries_path
     else
-      render :new_gallery
+      render :new
     end
   end
 
   def show
-    @gallery = Gallery.find_by(id: params[:id])
+    @gallery = Gallery.find(params[:id])
+  end
+
+  def edit
+    @gallery = Gallery.find(params[:id])
+  end
+
+  def update
+    @gallery = Gallery.find(params[:id])
+    if @gallery.update_attributes(gallery_params)
+      redirect_to gallery_path(@gallery)
+    else
+      render :edit
+    end
+  end
+
+  def destroy
+    @gallery = Gallery.find(params[:id])
+    @gallery.destroy
+    redirect_to galleries_path
   end
 
   private

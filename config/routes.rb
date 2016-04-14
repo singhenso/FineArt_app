@@ -1,24 +1,6 @@
 Rails.application.routes.draw do
 
-  get 'items/edit'
-
-  get 'items/index'
-
-  get 'items/new'
-
-  get 'items/show'
-
-  get 'artist/edit'
-
-  get 'artist/idex'
-
-  get 'artist/new'
-
-  get 'artist/show'
-
-
-
-  resources :users, :items
+  resources :users
 
   # root 'sessions#new'
   root 'sessions#new'
@@ -34,6 +16,8 @@ Rails.application.routes.draw do
 
   resources :galleries do
     # /galleries/:id/artists
-    resources :artists
+    resources :artists do
+      resources :items
+    end
   end
 end
