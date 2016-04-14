@@ -1,6 +1,9 @@
-<h1>Items#show</h1>
+<h7>Items#show</h7>
 <p>Find me in app/views/items/show.html.erb</p>
+<h1>This painting is called <%= @item.name %> by the Artist <%= @artist.name %> and belongs to <%= @gallery.name %> in <%= @gallery.location %> </h1>
 
 
 <%= image_tag @item.image.url(:large) %><br><hr>
-<a href="/items/<%= @item.id %>/artists/new">Add items</a>
+<a href="/items/<%= @item.id %>/artists/new">-tet-Add items</a>
+
+<%= link_to "create a new Artwork", new_gallery_artist_item_path %>
