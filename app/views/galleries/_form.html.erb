@@ -1,17 +1,17 @@
 <%= form_for [@user, @gallery] do |f| %>
-  <div>
+  <div class="form-group">
     <%= f.label :name%>
-    <%= f.text_field :name %>
+    <%= f.text_field :name,  :class  =>'form-control' %>
   </div>
-  <div>
+  <div class="form-group">
     <%= f.label :location %>
-    <%= f.text_field :location %>
+    <%= f.text_field :location, :class  =>'form-control' %>
   </div>
-  <div>
+  <div class="form-group">
     <%= f.label :genre %>
-    <%= f.text_field :genre %>
+    <%= f.text_field :genre, :class  =>'form-control' %>
   </div>
-  <div>
+  <div class="form-group">
     <%= f.submit %>
     </div>
   <% end %>
