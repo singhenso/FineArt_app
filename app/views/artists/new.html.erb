@@ -17,6 +17,7 @@
     <%= f.label :medium %>
     <%= f.text_field :medium %>
   </div>
+    <%= f.hidden_field :gallery_id, {:value => @gallery.id} %>
   <div>
     <%= f.submit %>
     </div>

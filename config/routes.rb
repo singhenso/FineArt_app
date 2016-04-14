@@ -27,6 +27,7 @@ Rails.application.routes.draw do
   post '/login' => 'sessions#create'
 
   delete '/logout' => 'sessions#destroy'
+
   post '/users/:user_id/galleries/new' => "galleries#new"
   get '/users/:user_id/galleries/' => "galleries#index"
   get '/items' => "items#index"

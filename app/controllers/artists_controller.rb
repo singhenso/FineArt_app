@@ -7,6 +7,7 @@ class ArtistsController < ApplicationController
   end
 
   def create
+
     @artist = Artist.new(artist_params)
     if @artist.save
       redirect_to artists_path
@@ -16,7 +17,7 @@ class ArtistsController < ApplicationController
   end
 
   def new
-    @gallery = Gallery.find_by(id: params[:id])
+    @gallery = Gallery.find_by(id: params[:gallery_id])
     @artist = Artist.new
   end
 
