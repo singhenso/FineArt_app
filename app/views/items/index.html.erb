@@ -1,4 +1,4 @@
-<h1> List of Paintings in this Gallery </h1>
+<h1> List of Paintings by <%= @artist.name %> </h1>
 
 <p>Find me in app/views/items/index.html.erb</p>
 
@@ -6,7 +6,7 @@
     <% @items.each do |item| %>
         <li>
           <div class="item">
-          <a href="items/<%=item.id %>">
+          <a href="/galleries/<%=@artist.gallery.id%>/artists/<%=@artist.id%>/items/<%=item.id %>">
                     Name: <%= item.name %><br>
                     Genre: <%= item.genre %><br>
                     Medium: <%= item.medium %><br>
@@ -16,3 +16,7 @@
         </li>
     <% end %>
 </ul>
+
+<%= link_to 'Add a painting', new_gallery_artist_item_path(@artist.gallery, @artist) %>
+
+

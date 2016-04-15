@@ -3,7 +3,8 @@ class ItemsController < ApplicationController
   end
 
   def index
-    @items= Item.all
+    @artist = Artist.find(params[:artist_id])
+    @items= @artist.items.all
   end
 
   def new
