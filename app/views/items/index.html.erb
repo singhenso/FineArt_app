@@ -19,4 +19,8 @@
 
 <%= link_to 'Add a painting', new_gallery_artist_item_path(@artist.gallery, @artist) %>
 
+<br>
+<%= link_to 'Destroy Artist!', gallery_artist_path(@artist.gallery, @artist), method: :delete, data: { confirm: 'Are you sure? '} %>
+
+
 
