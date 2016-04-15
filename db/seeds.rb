@@ -25,6 +25,26 @@ g1 = Gallery.new({
 g1.user = u1
 g1.save
 
+g2 = Gallery.new({
+  name: "Arcadia",
+  location: "Santa Monica",
+  genre: "Realism"
+})
+g2.user = u2
+g2.save
+
+g3 = Gallery.new({
+  name: "Linus",
+  location: "Pasadena",
+  genre: "Realism"
+})
+g3.user = u3
+g3.save
+
+
+
+
+
 a1 = Artist.create({
   name: "Sean Cheetham",
   genre: "Realism",
