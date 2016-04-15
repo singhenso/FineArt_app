@@ -2,20 +2,18 @@
 
 <ul><h1>
 <% @galleries.each do |gallery| %>
-  <li>
+  <li><h3>
     <div class="gallery">
       <a href="/galleries/<%= gallery.id %>/artists">
         <%= gallery.name %><br>
         <%= gallery.location %><br>
         <%= gallery.genre %><br>
         <br>
-
       </a>
     </div>
   </li>
-<% end %></h1>
+  </h3></li>
+<% end %>
 </ul>
 
-<h4><a href="/galleries/new">Make a new gallery</a></h4>
-
-
+<h3><a href="/galleries/new">Make a new gallery</a></h3>
