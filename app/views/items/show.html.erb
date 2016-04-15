@@ -7,3 +7,6 @@
 </h1>
  -->
 <h1><%= link_to "Create a new Artwork", new_gallery_artist_item_path %></h1>
+
+<%= link_to 'Destroy!', gallery_artist_path(@artist.gallery, @artist), method: :delete, data: { confirm: 'Are you sure? '} %>
+
